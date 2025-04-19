@@ -1,0 +1,12 @@
+[Unit]
+After=network.target
+
+[Service]
+#Environment="VENV_PATH=/home/sulphuricrog/iptran_datalogger/bin/python3"
+ExecStart=/home/sulphuricrog/iptran_datalogger/bin/python3 /home/sulphuricrog/iptran_datalogger/src/modules/queue_server.py
+Restart=always
+User=sulphuricrog
+
+
+[Install]
+WantedBy=multi-user.target
